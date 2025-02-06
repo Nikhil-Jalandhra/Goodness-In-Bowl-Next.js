@@ -1,0 +1,63 @@
+@keyframes bouncy {
+    0% {
+        font-weight: 900;
+    }
+    50% {
+        font-weight: 100;
+    }
+    100% {
+        font-weight: 900;
+    }
+}
+
+.aboutParagraphContainer{
+    width: 100%;
+    height: calc(100vh - 80px);
+    color: var(--fontColor);
+    background-color: var(--baseColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "HeroFont";
+}
+
+.aboutParagraphContent {
+    width: 65%;
+}
+
+.aboutParagraphContentP {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.aboutParagraphContent h1 {
+    font-size: 60px;
+    line-height: 80px;
+    animation: bouncy 15s infinite linear;
+    font-size: 50px;
+    font-family: "HeroFont";
+}
+
+.aboutParagraphContainer span {
+    font-family: "HeroFont";
+    font-size: 50px;
+    color: red;
+}
+
+.aboutParagraphContentP2 {
+    margin-top: 50px;
+}
+
+.aboutParagraphContentP2 a {
+    text-decoration: none;
+}
+
+.aboutParagraphContentP2 span {
+    font-family: "HeroFont";
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--fontColor);
+}

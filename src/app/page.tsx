@@ -1,95 +1,119 @@
+"use client"
+import "./page.css";
+// import allBlogs from "../database/blog";
+// import AboutParagraph from "../Components/AboutParagraph";
+// import BlogCard from "../Components/BlogCard";
+// import RecipeCard from "../Components/RecipeCard";
+// import allRecipies from "../database/recipes.ts";
+import { SiInstagram } from "react-icons/si";
+import { FaFacebookSquare } from "react-icons/fa";
+import { TfiYoutube } from "react-icons/tfi";
+import { useState, useEffect, useCallback, useMemo } from "react";
 import Image from "next/image";
-import styles from "./page.module.css";
+import FilterButton from "./components/(filterButton)/FilterButton";
+import filterData from "./DB/filterData";
+import blogData from "./DB/blogData";
+import BlogCard from "./components/(blogCard)/BlogCard";
+import recipeData from "./DB/recipeData";
+import RecipeCard from "./components/(recipeCard)/RecipeCard";
+import AboutParagraph from "./components/(aboutParagraph)/AboutParagraph";
 
-export default function Home() {
+function Home() {
+
+    const allBowl = useMemo(() => [
+      "/Images/homeBowl1.png",
+      "/Images/homeBowl2.png",
+      "/Images/homeBowl3.png",
+      "/Images/homeBowl4.png",
+      "/Images/homeBowl5.png",
+      "/Images/homeBowl6.png",
+      "/Images/homeBowl7.png",
+      "/Images/homeBowl8.png",
+      "/Images/homeBowl9.png",
+      "/Images/homeBowl10.png",
+    ], []); // this is a expensve task of cpu there for I use Use memo Hook that why it is only initialize once
+  
+    // Wrap getRandomBowlImage in useCallback to stabilize its reference
+    const getRandomBowlImage = useCallback(() => {
+      return allBowl[Math.floor(Math.random() * allBowl.length)];
+    }, [allBowl]); // only when allBowl array will update
+  
+    const [homeBowlImage, setHomeBowlImage] = useState(getRandomBowlImage());
+  
+    useEffect(() => {
+      const intervalId = setInterval(() => {
+        setHomeBowlImage(getRandomBowlImage());
+      }, 3000);
+
+      
+      return () => clearInterval(intervalId);
+    }, [getRandomBowlImage]); // Now it's stable
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div>
+      <div className="homeContainer">
+          <div className="homeTextManager">
+            <h1>Wholesome Recipes <br /> for Every Occasion</h1>
+            <p>Goodness In Bowl, to Warm Your Soul</p>
+            <Image 
+            width={3508}
+            height={700}
+            src="/Images/mainText.png" 
+            alt="Goodness In Bowl" />
+          </div>
+          <div className="homeBowlContainer">
+          <Image 
+          width={1500}
+          height={1490}
+          src={homeBowlImage} 
+          alt="Bowl" />
+          </div>
+      </div>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      <div className="displayRecipeFilter">
+        {filterData.map((item, index) => (
+          <FilterButton key={index} item={item}/>
+        ))}
+      </div>
+      
+          <AboutParagraph/>
+
+          <div className="homeBlogDisplay">
+            <h1 className="homeBlogHeading">Our Blogs</h1>
+            <div className="homeBlogCardDisplay">
+              {blogData.map((item) => (
+                item.id <= 3 && <BlogCard item={item} key={item.id}/>
+              ))}
+            </div>
+          </div>
+
+          <div className="homeRecipeDisplay">
+            <h1 className="homeRecipeHeading">Our Recipes</h1>
+            <div className="homeRecipeCardDisplay">
+              {recipeData.map((item) => (
+                item.id <= 4 && <RecipeCard item={item} key={item.id}/>
+              ))}
+            </div>
+          </div>
+
+          <div className="homeImageGrid">
+            <div className="homeImageGridHeading">
+              <h1>Find us on:</h1>
+              <div className="socialIcon">
+                <p><SiInstagram /></p>
+                <p><FaFacebookSquare /></p>
+                <p><TfiYoutube /></p>
+              </div>
+            </div>
+            <div className="homeImageGridContainer">
+              <Image className="home1" width={2000} height={1500} src='/Images/home1.jpg' alt="home1" />
+              <Image className="home2" width={2000} height={1500} src='/Images/home2.jpg' alt="home2" />
+              <Image className="home3" width={2000} height={1500} src='/Images/home3.jpg' alt="home3" />
+              <Image className="home4" width={2000} height={1500} src='/Images/home4.jpg' alt="home42" />
+            </div>
+          </div>
     </div>
   );
 }
+
+export default Home;

@@ -1,0 +1,86 @@
+.recipeCard {
+    width: 280px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.recipeCard a {
+    text-decoration: none;
+    color: var(--Color);
+}
+
+.recipeImageContainer {
+    width: 100%;
+    height: 80%;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.recipeCategory {
+    position: absolute;
+    right: 0;
+    margin: 10px 10px 0 0 ;
+    border-radius: 5px;
+    padding: 5px 8px;
+    background-color: var(--baseColor);
+    z-index: 1;
+    font-size: 12px;
+}
+
+.recipePreview {
+    z-index: 1;
+    margin-bottom: 10px;
+    width: calc(100% - 20px);
+    position: absolute;
+    bottom: calc(0% - 70px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--baseColor);
+    border-radius: 5px;
+    padding: 8px 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.3s ease-in-out;
+    font-size: 13px;
+}
+
+.recipeCard:hover .recipePreview {
+    bottom: 0
+}
+
+.recipeImageContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s ease-in-out;
+}
+
+.recipeCard:hover img {
+    transform: scale(1.1);
+}
+
+.recipeDetailContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0 0 5px;
+}
+
+.recipeDetail {
+    text-wrap: nowrap;
+    padding: 4px 4px;
+    border: 1px solid var(--fontColor);
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.recipeCard h1 {
+    padding-left: 5px;
+    font-family: "HeroFont";
+}
