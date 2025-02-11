@@ -12,14 +12,13 @@
 
 .aboutParagraphContainer{
     width: 100%;
-    height: calc(100vh - 80px);
     color: var(--fontColor);
     background-color: var(--baseColor);
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-family: "HeroFont";
+    margin: 2em 0;
 }
 
 .aboutParagraphContent {
@@ -28,27 +27,26 @@
 
 .aboutParagraphContentP {
     text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 15px;
+    letter-spacing: 0.2rem;
+    font-size: var(--fs-small);
+    font-family: "HeroFont";
     font-weight: 300;
 }
 
 .aboutParagraphContent h1 {
-    font-size: 60px;
-    line-height: 80px;
+    line-height: var(--fs-head);
     animation: bouncy 15s infinite linear;
-    font-size: 50px;
     font-family: "HeroFont";
+    text-wrap: nowrap;
 }
 
 .aboutParagraphContainer span {
     font-family: "HeroFont";
-    font-size: 50px;
     color: red;
 }
 
 .aboutParagraphContentP2 {
-    margin-top: 50px;
+    margin-top: 2rem;
 }
 
 .aboutParagraphContentP2 a {
@@ -57,7 +55,36 @@
 
 .aboutParagraphContentP2 span {
     font-family: "HeroFont";
-    font-size: 22px;
+    font-size: var(--fs-subhead);
     font-weight: 900;
     color: var(--fontColor);
+}
+
+@media (max-width: 1440px) {
+
+    .aboutParagraphContent {
+        width: 65%;
+    }
+    
+}
+
+
+@media (max-width: 940px) {
+
+    .aboutParagraphContent {
+        width: 85%;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .aboutParagraphContent {
+        width: 85%;
+    }
+
+    .aboutParagraphContentP {
+        font-size: 0.6rem;
+    }
+
 }

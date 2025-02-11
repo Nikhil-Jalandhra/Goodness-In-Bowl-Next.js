@@ -4,8 +4,8 @@
 }
 
 .filterButtonContainer {
-    width: 180px;
-    height: 180px;
+    width: 150px;
+    height: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,12 +43,12 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-weight: 900;
     color: var(--fontColor);
     text-align: center;
     z-index: 2;
     transition: transform 0.5s ease, opacity 0.5s ease;
-    font-size: 22px;
+    font-size: var(--fs-content);
+    font-weight: 800;
 }
 
 .filterButtonImage::after {
@@ -84,12 +84,38 @@
     transition: background-color 0.5s ease;
 }
 
-@media (max-width: 600px) {
+
+/* ----------------------------------------------------------- */
+
+@media (max-width: 1440px) {
+
     .filterButtonContainer {
-        width: 120px;
-        height: 150px;
+        width: 180px;
+        height: 180px;
     }
+
+}
+
+
+@media (max-width: 940px) {
+
+    .filterButtonContainer {
+        width: 80px;
+        height: 80px;
+    }
+
     .filterButtonImage p {
-        font-size: 16px;
+        font-size: var(--fs-small);
+        font-weight: 700;
     }
+
+}
+
+@media (max-width: 600px) {
+
+    .filterButtonContainer {
+        width: 80px;
+        height: 80px;
+    }
+
 }

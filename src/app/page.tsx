@@ -1,10 +1,5 @@
 "use client"
 import "./page.css";
-// import allBlogs from "../database/blog";
-// import AboutParagraph from "../Components/AboutParagraph";
-// import BlogCard from "../Components/BlogCard";
-// import RecipeCard from "../Components/RecipeCard";
-// import allRecipies from "../database/recipes.ts";
 import { SiInstagram } from "react-icons/si";
 import { FaFacebookSquare } from "react-icons/fa";
 import { TfiYoutube } from "react-icons/tfi";
@@ -62,11 +57,12 @@ function Home() {
             alt="Goodness In Bowl" />
           </div>
           <div className="homeBowlContainer">
-          <Image 
-          width={1500}
-          height={1490}
-          src={homeBowlImage} 
-          alt="Bowl" />
+            <div className="homeBowlHolder">
+              <Image 
+              fill
+              src={homeBowlImage} 
+              alt="Bowl" />
+            </div>
           </div>
       </div>
 
@@ -98,7 +94,7 @@ function Home() {
 
           <div className="homeImageGrid">
             <div className="homeImageGridHeading">
-              <h1>Find us on:</h1>
+              <h2>Find us on:</h2>
               <div className="socialIcon">
                 <p><SiInstagram /></p>
                 <p><FaFacebookSquare /></p>

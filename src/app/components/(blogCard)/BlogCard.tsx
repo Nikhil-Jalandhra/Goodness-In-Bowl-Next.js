@@ -36,7 +36,7 @@ function BlogCard({item}: blogCardData) {
                 />
             </div>
             <div className="blogDetailContainer">
-              <h1>{item.title1}</h1>
+              <h2>{item.title1.slice(0,40)}..</h2>
               <p>{item.description1.slice(0,160)}...</p>
             </div>
           </Link>

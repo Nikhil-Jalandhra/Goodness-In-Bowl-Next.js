@@ -1,9 +1,11 @@
 :root {
   --fontColor: #5A0808;
-}
-
-:root {
-  --baseColor: #ffe169; 
+  --baseColor: #ffe169;
+  
+  --fs-head: 4rem;
+  --fs-sub-head : 2.1rem;
+  --fs-content : 1.2rem;
+  --fs-small : 0.9rem;
 }
 
 @font-face {
@@ -20,13 +22,56 @@
   user-select: none;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
-  font-size: 20px;
+  font-size: var(--fs-content);
   font-family: "Roboto", sans-serif;
   background-color: var(--baseColor);
 
 }
 
 h1 {
-  font-size: 30px;
+  font-size: var(--fs-head);
+}
+
+h2 {
+  font-size: var(--fs-sub-head);
+  font-weight: 700;
+}
+
+@media (max-width: 1440px) {
+
+  :root { 
+    --fs-head: 4rem;
+    --fs-sub-head : 2.1rem;
+    --fs-content : 1.2rem;
+    --fs-small : 0.9rem;
+  }
+
+}
+
+
+@media (max-width: 940px) {
+
+  :root { 
+    --fs-head: 3rem;
+    --fs-sub-head : 2.1rem;
+    --fs-content : 1.1rem;
+    --fs-small : 0.9rem;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  :root { 
+    --fs-head: 1.5rem;
+    --fs-sub-head : 1.8rem;
+    --fs-content : 1rem;
+    --fs-small : 0.9rem;
+  }
+
 }

@@ -48,7 +48,7 @@ function RecipeSummary({params}) {
                   Object.keys(recipeSummaryData?.nutrients).map((key, index)=> (
                     <div key={index} className="reicpeNutrientsDetails">
                       <p>{typeNutrients[key]}</p>
-                      <h2>{key}</h2>
+                      <span>{key}</span>
                     </div>
                   ))
                 )}
@@ -57,13 +57,13 @@ function RecipeSummary({params}) {
                 <div className="ingredinetsTable">
                   {recipeSummaryData?.ingredientSections.map((item, index) => (
                     <div key={index}>
-                      <h1>{item.name}</h1>
+                      <h2>{item.name}</h2>
                       <div>
                         <div>{item.items.map((item, index) => (
                             <div onClick={() => ingredientToggle(item.name)} 
                             className={`ingredinetsTableRow ${ingredientDone[item.name] ? "ingredinetsTableRowDone" : ""}`} key={index} style={{display: "flex"}}>
-                                <p className="tableDot">{ingredientDone[item.name] ? <IoIosCheckmarkCircleOutline /> : <LiaCircle/>}</p>
-                                <h2>{item.name}, {item.quantity}, {item.unit}</h2>
+                                <span className="tableDot">{ingredientDone[item.name] ? <IoIosCheckmarkCircleOutline /> : <LiaCircle/>}</span>
+                                <p>{item.name}, {item.quantity}, {item.unit}</p>
                             </div>
                         ))}</div>
                       </div>
@@ -72,14 +72,14 @@ function RecipeSummary({params}) {
                 </div>
 
                 <div>
-                  <h1>Tools You Need</h1>
+                  <h2>Tools You Need</h2>
                   {recipeSummaryData?.tools.map((item, index)=> (
                     <p key={index}>{index+1}. {item}</p>
                   ))}
                 </div>
 
                 <div>
-                  <h1>Prepration</h1>
+                  <h2>Prepration</h2>
                 {recipeSummaryData?.preparationSteps.map((item, index)=> (
                   <p key={index}>{index+1}. {item}</p>
                 ))}
@@ -89,7 +89,7 @@ function RecipeSummary({params}) {
                 <div className="recipeInstructionsContainer1">
                   {recipeSummaryData?.cookingSteps.map((item, index)=> (
                     <div key={index}>
-                      <h1>{item.name}</h1>
+                      <h2>{item.name}</h2>
                       {item.steps.map((item,index)=> (
                         <p key={index}>{index+1}. {item}</p>
                       ))}

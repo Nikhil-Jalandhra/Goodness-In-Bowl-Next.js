@@ -23,9 +23,6 @@ function Recipes() {
             {recipeData.map((item, key) => (
               <RecipeCard item={item} key={key} />
             ))}
-            {/* {!finalData ? <p></p> : finalData.map((item, key) => (
-              <RecipeCard item={item} key={key} />
-            ))} */}
             </div>
         </div>
     </div>

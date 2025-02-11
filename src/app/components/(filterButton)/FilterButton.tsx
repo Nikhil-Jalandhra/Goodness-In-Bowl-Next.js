@@ -16,20 +16,20 @@ function FilterButton({item}: buttonDetails) {
 
   return (
     <div className="filterButtonWrap">
-  <Link href={link}>
-    <div className="filterButtonContainer">
-      <div className="filterButtonImage">
-        <Image 
-        style={{ objectFit: 'cover' }} 
-        width={2000} 
-        height={1500} 
-        src={image} 
-        alt={name || "Filter Image"} />
-        <p>{name}</p>
-      </div>
+      <Link href={link}>
+        <div className="filterButtonContainer">
+          <div className="filterButtonImage">
+            <Image 
+            style={{ objectFit: 'cover' }} 
+            width={2000} 
+            height={1500} 
+            src={image} 
+            alt={name || "Filter Image"} />
+            <p>{name}</p>
+          </div>
+        </div>
+      </Link>
     </div>
-  </Link>
-</div>
   );
 }
 

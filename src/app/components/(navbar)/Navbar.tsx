@@ -19,7 +19,7 @@ function Navbar() {
         <div className="navLogoContainer">
           <Link href="/">
             <div className="logoContainer">
-                <h1>GIB</h1>
+                <h2>GIB</h2>
                 <span><GiBowlOfRice /></span>
             </div>
           </Link>

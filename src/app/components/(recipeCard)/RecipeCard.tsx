@@ -66,7 +66,7 @@ function RecipeCard({item}: RecipeCardData) {
                 <div className="recipeDetail"><RxLapTimer />&nbsp;{item.preparationTime} prep</div>
                 <div className="recipeDetail"><PiCookingPotFill />&nbsp;{item.cookingTime} cook</div>
             </div>
-            <h1>{item.name}</h1>
+            <h2>{item.name}</h2>
           </Link>
         </div>
     </div>

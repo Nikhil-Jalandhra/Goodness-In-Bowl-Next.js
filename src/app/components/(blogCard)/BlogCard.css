@@ -3,6 +3,8 @@
     height: 500px;
     overflow: hidden;
     border-radius: 10px;
+    font-size: var(--fs-small);
+    text-align: lef;
 }
 
 .blogCard a {
@@ -26,7 +28,6 @@
     padding: 8px 15px;
     background-color: var(--baseColor);
     z-index: 1;
-    font-size: 16px;
 }
 
 .blogPreview {
@@ -44,7 +45,6 @@
     left: 50%;
     transform: translateX(-50%);
     transition: 0.3s ease-in-out;
-    font-size: 16px;
 }
 
 .blogCard:hover .blogPreview {
@@ -65,10 +65,37 @@
 .blogDetailContainer {
     padding: 5px 0px;
     overflow: hidden;
+    font-size: var(--fs-content);
 }
 
-.blogDetailContainer h1 {
+.blogDetailContainer h2 {
     line-height: 30px;
     font-family: "HeroFont";
     padding: 10px 0;
+}
+
+@media (max-width: 1440px) {
+    .blogCard {
+        width: 350px;
+        height: 500px;
+    }
+}
+
+
+@media (max-width: 940px) {
+
+    .blogCard {
+        width: 350px;
+        height: 500px;
+    }
+
+}
+
+@media (max-width: 440px) {
+
+    .blogCard {
+        width: 350px;
+        height: 500px;
+    }
+
 }
