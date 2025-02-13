@@ -19,7 +19,7 @@ function Recipes({params}: { params: Promise<Params>}) {
   
   useEffect(() => {
     const filterData = recipesFilter ? recipeData.filter((item) => (item.tags.includes(recipesFilter))) : recipeData;
-    
+  
     setFinalData(filterData);
   }, [recipesFilter]);
 
@@ -37,7 +37,7 @@ function Recipes({params}: { params: Promise<Params>}) {
             {finalData.map((item, key) => (
               <RecipeCard item={item} key={key} />
             ))}
-            </div>
+          </div>
         </div>
     </div>
   );
