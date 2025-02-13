@@ -68,8 +68,8 @@ h2 {
 @media (max-width: 600px) {
 
   :root { 
-    --fs-head: 1.5rem;
-    --fs-sub-head : 1.8rem;
+    --fs-head: 1.8rem;
+    --fs-sub-head : 1.6rem;
     --fs-content : 1rem;
     --fs-small : 0.9rem;
   }

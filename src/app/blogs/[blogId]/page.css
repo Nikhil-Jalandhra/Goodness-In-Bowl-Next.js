@@ -67,3 +67,46 @@
     
 }
 
+@media (max-width: 1440px) {
+
+    .blogSummaryImageContainer {
+        width: 100%;
+        height: 200px;
+    }
+
+    .blogSummaryChildrenImageContainer {
+        width: 70%;
+        height: 150px;
+    }
+
+}
+
+@media (max-width: 940px) {
+
+    .blogSummaryImageContainer {
+        width: 100%;
+        height: 180px;
+    }
+
+    .blogSummaryChildrenImageContainer {
+        width: 80%;
+        height: 130px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .blogSummaryImageContainer {
+        width: 100%;
+        height: 130px;
+    }
+
+    .blogSummaryChildrenImageContainer {
+        width: 90%;
+        height: 100px;
+    }
+
+}
+
+

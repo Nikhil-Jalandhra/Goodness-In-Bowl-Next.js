@@ -1,15 +1,13 @@
 .homeContainer {
     width: 100%;
-    height: calc(100vh - 80px);
+    min-height: calc(100vh - 80px);
     color: var(--fontColor);
     background-color: var(--baseColor);
-    display: grid;
-    grid-template-columns:  1fr 1fr;
+    display: flex;
 }
 
 .homeTextManager {
     width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,12 +18,12 @@
 .homeTextManager h1 {
     text-wrap: nowrap;
     font-family: "HeroFont";
-    line-height: 5vw;
+    line-height: 5rem;
 }
 
 .homeTextManager p {
     margin-top: 20px;
-    letter-spacing: 3px;
+    letter-spacing: 0.2rem;
 }
 
 .homeTextManager img {
@@ -40,7 +38,6 @@
 
 .homeBowlContainer {
     width: 100%;
-    height: 100%;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -84,7 +81,8 @@
     display: flex;
     align-items: center;
     justify-content: center; 
-    background-color: var(--baseColor);   
+    background-color: var(--baseColor);
+    overflow: scroll;
 }
 
 .homeBlogDisplay {
@@ -138,13 +136,12 @@
 
 .homeImageGrid {
     width: 100%;
-    /* height: 90vh; */
     display: flex;
     align-items: center;
     flex-direction: column;
     background-color: var(--baseColor);
-    padding-top: 20px;
-    margin-bottom: 100px;
+    /* padding-top: 20px; */
+    margin-bottom: 9rem;
 }
 
 .homeImageGridHeading {
@@ -174,7 +171,7 @@
     width: 80%;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: 25px;
+    gap: 1.7rem;
 }
 
 .homeImageGridContainer img {
@@ -206,6 +203,58 @@
         width: 480px;
         height: 480px;
     }
+
+    .homeRecipeCardDisplay {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .homeContainer {
+        flex-direction: column;
+    }
+
+    .homeContainer {
+        min-height: 100px;
+    }
+
+    .homeTextManager {
+        width: 100%;
+        margin-top: 70px;
+    }
+
+    .homeBowlContainer {
+        padding: 40px;
+        margin-bottom: 50px;
+    }
+
+    .homeTextManager img {
+        width: 300px;
+    }
+
+    .homeImageGridContainer {
+        gap: 0.6rem;
+    }
+
+    .home1 {
+        height: 250px;
+        grid-column: 1 / 4;
+    }
+    
+    .home2 {
+        height: 200px;
+        grid-column: 4 / 7;
+    }
+    .home3 {
+        height: 300px;
+        grid-column: 7 / 10;
+    }
+    .home4 {
+        height: 180px;
+        grid-column: 10 / 13;
+    }
+
+    .homeImageGrid {
+        margin-bottom: 4rem;
+    }
     
 }
 
@@ -217,13 +266,71 @@
         height: 280px;
     }
 
+    .homeBlogCardDisplay {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .homeRecipeCardDisplay {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .homeTextManager h1 {
+        line-height: 4rem;
+    }
+
+    .homeTextManager p {
+        letter-spacing: 0.1rem;
+    }
+
 }
 
 @media (max-width: 600px) {
 
     .homeBowlHolder {
-        width: 480px;
-        height: 480px;
+        width: 280px;
+        height: 280px;
+    }
+
+    .homeBlogCardDisplay {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .homeRecipeCardDisplay {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .homeTextManager img {
+        width: 200px;
+    }
+
+    .homeTextManager h1 {
+        line-height: 2rem;
+    }
+
+    .displayRecipeFilter {
+        justify-content: left; 
+    }
+
+    .homeImageGridContainer {
+        gap: 0.6rem;
+    }
+
+    .home1 {
+        height: 150px;
+        grid-column: 1 / 4;
+    }
+    
+    .home2 {
+        height: 120px;
+        grid-column: 4 / 7;
+    }
+    .home3 {
+        height: 180px;
+        grid-column: 7 / 10;
+    }
+    .home4 {
+        height: 90px;
+        grid-column: 10 / 13;
     }
 
 }

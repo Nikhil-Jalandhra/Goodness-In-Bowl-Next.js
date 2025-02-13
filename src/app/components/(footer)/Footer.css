@@ -63,22 +63,15 @@
 
 @media (max-width: 1440px) {
     
-    /* .blogsCardContainer {
-        grid-template-columns: repeat(3, 1fr);
-    } */
-    
 }
 
 
 @media (max-width: 940px) {
-    
-    /* .blogsCardContainer {
-        grid-template-columns: repeat(2, 1fr);
-    } */
+
 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 940px) {
 
     .footerContainer{
         width: 100%;
@@ -96,8 +89,7 @@
     }
 
     .footerMainText img {
-        width: 200px;
-        height: auto;
+        width: 250px;
     }
 
     .footerLinks {
@@ -121,6 +113,15 @@
 
     .footerLegal p{
         margin: 5px 0;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .footerMainText img {
+        width: 200px;
     }
 
 }
