@@ -1,6 +1,6 @@
 const recipeData = [
     {
-        id: 1,
+        id: "1",
         name: "Chole Bhature",
         about: "Chole Bhature is a classic North Indian dish known for its rich, spicy chickpea curry (chole) paired with fluffy deep-fried bread (bhature). This hearty combination is a favorite for festive occasions and indulgent meals.",
         image: "/Images/recipe2.jpg",
@@ -57,7 +57,7 @@ const recipeData = [
         notes: "For extra flavor, garnish with fresh coriander and a squeeze of lemon."
     },
     {
-        id: 2,
+        id: "2",
         name: "Poha",
         about: "Poha is a quick and light Indian breakfast dish made with flattened rice, spices, and aromatic tempering. It is both healthy and satisfying, perfect for starting your day.",
         image: "/Images/recipe1.jpg",
@@ -101,7 +101,7 @@ const recipeData = [
         notes: "For added flavor, include a pinch of sugar and grated coconut."
     },
     {
-        id: 3,
+        id: "3",
         name: "Chowmein",
         about: "Chowmein is a popular Indo-Chinese stir-fried noodle dish, loaded with vegetables and bold flavors. Perfect as a snack or a main course.",
         image: "/Images/recipe3.jpg",
@@ -145,7 +145,7 @@ const recipeData = [
         notes: "Adjust the spice level by adding chili sauce or flakes."
     },
     {
-        id: 4,
+        id: "4",
         name: "Vegetable Biryani",
         about: "Vegetable Biryani is a fragrant and flavorful one-pot rice dish cooked with aromatic spices and a medley of fresh vegetables. It's a hearty meal that captures the essence of Indian cuisine.",
         image: "/Images/recipe4.jpg",
@@ -189,7 +189,7 @@ const recipeData = [
         notes: "Garnish with fried onions and fresh mint for added flavor."
     },
     {
-        id: 5,
+        id: "5",
         name: "Samosa",
         about: "Samosa is a popular Indian snack made with a crispy, flaky pastry shell filled with a spiced potato mixture. It's perfect for tea-time or as an appetizer.",
         image: "/Images/recipe5.jpg",
@@ -232,7 +232,7 @@ const recipeData = [
         notes: "Ensure the oil is hot enough to avoid soggy samosas." 
     },
     {
-        id: 6,
+        id: "6",
         name: "Paneer Butter Masala",
         about: "Paneer Butter Masala is a creamy and rich Indian curry made with paneer (Indian cottage cheese) cooked in a flavorful tomato-based gravy. It’s a crowd favorite and perfect for dinner.",
         image: "/Images/recipe6.jpg",
@@ -284,7 +284,7 @@ const recipeData = [
         servings: 4,
         notes: "Use fresh cream for the best flavor and garnish with fresh cilantro before serving."
     },{
-        id: 7,
+        id: "7",
         name: "Gulab Jamun",
         about: "Gulab Jamun is a classic Indian dessert made with soft milk-based dumplings soaked in a fragrant sugar syrup. It’s a must-have for festive occasions or as a sweet ending to a meal.",
         image: "/Images/recipe7.jpg",

@@ -7,11 +7,15 @@ import Link from "next/link";
 import recipeData from "@/app/DB/recipeData";
 import Image from "next/image";
 
+interface Params {
+  recipeId?: string;
+}
 
-function RecipeSummary({params}) {
+
+function RecipeSummary({params}: { params: Promise<Params>}) {
 
   const { recipeId } = use(params);
-    const  recipeSummaryData = recipeData.find(item => (item.id === Number(recipeId)));
+    const  recipeSummaryData = recipeData.find(item => (item.id === String(recipeId)));
 
     type RecipeNutrients = {
       [key: string]: string | undefined;
@@ -97,7 +101,7 @@ function RecipeSummary({params}) {
                   ))}
                 </div>
          
-                <h2>"{recipeSummaryData?.servingSuggestions}"</h2>
+                <h2>&quot;{recipeSummaryData?.servingSuggestions}&quot;</h2>
                       
                 <iframe width="100%" height="500px" src="https://www.youtube.com/embed/XuttnylxuXY?si=XwsX31TDDp9IO1YG" title={recipeSummaryData?.name} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
 

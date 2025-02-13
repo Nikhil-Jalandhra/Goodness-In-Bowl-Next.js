@@ -8,7 +8,7 @@ import Link from "next/link";
 
 interface RecipeCardData {
   item: {
-    id: number;
+    id: string;
     name: string;
     about: string;
     image: string;
