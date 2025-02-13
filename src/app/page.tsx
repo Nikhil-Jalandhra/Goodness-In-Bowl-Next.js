@@ -86,8 +86,8 @@ function Home() {
           <div className="homeRecipeDisplay">
             <h1 className="homeRecipeHeading">Our Recipes</h1>
             <div className="homeRecipeCardDisplay">
-              {recipeData.map((item) => (
-                item.id <= 4 && <RecipeCard item={item} key={item.id}/>
+              {recipeData.map((item, index) => (
+                index <= 4 && <RecipeCard item={item} key={item.id}/>
               ))}
             </div>
           </div>
