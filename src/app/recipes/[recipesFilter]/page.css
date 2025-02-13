@@ -39,10 +39,18 @@
 
 }
 
-@media (max-width: 440px) {
+@media (max-width: 600px) {
 
     .recipesCardContainer {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .displayRecipeFilter {
+        justify-content: left;
     }
 
 }

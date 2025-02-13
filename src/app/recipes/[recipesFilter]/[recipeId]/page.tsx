@@ -115,54 +115,19 @@ function RecipeSummary({params}: { params: Promise<Params>}) {
         <div className="recipeSummaryContent2">
           <div className="viewMoreRecipes">
             <h2 className="viewMoreHeading">View More</h2>
-            <div className="sepcificRecipe">
-              <div className="viewMoreRecipesImg">
-                <Image fill src="/Images/recipe1.jpg" alt="recipe" />
-              </div>
-              <div className="specificRecipeAbout">
-                  <h2>Poha</h2>
-                  <p>4 servings</p>
-                  <p>30 min prep</p>
-                  <p>45 min cook</p>
-              </div>
-              <p></p>
-            </div>
-            <div className="sepcificRecipe">
-              <div className="viewMoreRecipesImg">
-                <Image fill src="/Images/recipe1.jpg" alt="recipe" />
-              </div>
-              <div className="specificRecipeAbout">
-                  <h2>Poha</h2>
-                  <p>4 servings</p>
-                  <p>30 min prep</p>
-                  <p>45 min cook</p>
-              </div>
-              <p></p>
-            </div>
-            <div className="sepcificRecipe">
-              <div className="viewMoreRecipesImg">
-                <Image fill src="/Images/recipe1.jpg" alt="recipe" />
-              </div>
-              <div className="specificRecipeAbout">
-                  <h2>Poha</h2>
-                  <p>4 servings</p>
-                  <p>30 min prep</p>
-                  <p>45 min cook</p>
-              </div>
-              <p></p>
-            </div>
-            <div className="sepcificRecipe">
-              <div className="viewMoreRecipesImg">
-                <Image fill src="/Images/recipe1.jpg" alt="recipe" />
-              </div>
-              <div className="specificRecipeAbout">
-                  <h2>Poha</h2>
-                  <p>4 servings</p>
-                  <p>30 min prep</p>
-                  <p>45 min cook</p>
-              </div>
-              <p></p>
-            </div>
+            {recipeData.map((item, index) => (
+               index <=3 && <Link className="sepcificRecipe" key={item.id} href={`/recipes/${item.tags}/${item.id}`}>
+                  <div className="viewMoreRecipesImg">
+                    <Image fill src={item.image} alt="recipe" />
+                  </div>
+                  <div className="specificRecipeAbout">
+                      <h2>{item.name}</h2>
+                      <p>{item.servings} servings</p>
+                      <p>{item.preparationTime} min prep</p>
+                      <p>{item.cookingTime} min cook</p>
+                  </div>
+              </Link>
+            ))}
           </div>
         </div>
       </div>
